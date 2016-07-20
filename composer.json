@@ -1,0 +1,21 @@
+{
+    "name": "lavalite/testimonial",
+    "description": "Testimonial package for lavalite.",
+    "keywords": ["lavalite", "Testimonial"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Litecms",
+            "email": "info@lavalite.org"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Litecms\\Testimonial\\": "src/Litecms/Testimonial"
+        }
+    },
+    "minimum-stability": "dev"
+}
