@@ -2,9 +2,9 @@ This is a Laravel 5 package that provides testimonial management facility for la
 
 ## Installation
 
-Begin by installing this package through Composer. Edit your project's `composer.json` file to require `lavalite/testimonial`.
+Begin by installing this package through Composer. Edit your project's `composer.json` file to require `litecms/testimonial`.
 
-    "lavalite/testimonial": "dev-master"
+    "litecms/testimonial": "dev-master"
 
 Next, update Composer from the Terminal:
 
@@ -40,8 +40,7 @@ Language
 
 Views public and admin
 
-    php artisan vendor:publish --provider="Litecms\Testimonial\Providers\TestimonialServiceProvider" --tag="view-public"
-    php artisan vendor:publish --provider="Litecms\Testimonial\Providers\TestimonialServiceProvider" --tag="view-admin"
+    php artisan vendor:publish --provider="Litecms\Testimonial\Providers\TestimonialServiceProvider" --tag="view"
 
 Publish admin views only if it is necessary.
 
