@@ -15,23 +15,23 @@
         </div>
         <div class="row m-t-40">
             <div class="col-md-12" id="testimonial">
-                @forelse($testimonials as $key=>$value)
+                @forelse($testimonials as $key=>$testimonial)
                 <div class="testimonial-item">
                 <?php $bg = $key % 3;?>
                     <div class="testimonial-top-bg bg-{!!$bg!!}">
                     </div>
                     <div class="testimonial-desc">
                         <div class="testimonial-avtar">
-                            @if(!empty($value['image']))
-                                <img alt="" class="img-responsive img-circle center-block" src="{!!trans_url('image/tm/'.@$value['image']['efolder'])!!}/{!!@$value['image']['file']!!}">
+                            @if(!empty($testimonial['image']))
+                                <img alt="" class="img-responsive img-circle center-block" src="{!!url(@$testimonial->defaultImage('tm','image'))!!}">
                             @endif
                         </div>
                         <h3 class="text-capitalize">
-                            {{@$value->name}}
+                            {{@$testimonial->name}}
                         </h3>
-                        <p class="text-uppercase text-muted"><small>{!!$value->designation!!}</small></p>
+                        <p class="text-uppercase text-muted"><small>{!!$testimonial->designation!!}</small></p>
                         <p>
-                            {{$value->description}}
+                            {{$testimonial->description}}
                         </p>
 
                     </div>

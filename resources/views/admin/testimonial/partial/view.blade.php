@@ -31,11 +31,10 @@
                        -> placeholder(trans('testimonial::testimonial.placeholder.description'))!!}
                 </div>
                 <div class='col-md-6 col-sm-12'>
-                @if(!empty($testimonial['image']))
+
                 <label>Photo</label><br>
-                    <img src="{!!trans_url('image/sm/'.@$testimonial['image']['efolder'])!!}/{!!@$testimonial['image']['file']!!}">
+                    <img src="{!!url(@$testimonial->defaultImage('sm','image'))!!}">
                 </div>
-                @endif
                 {!!Form::hidden('upload_folder')!!}
 
 

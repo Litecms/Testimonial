@@ -1,7 +1,7 @@
 {
     "name": "litecms/testimonial",
     "description": "Testimonial package for lavalite.",
-    "keywords": ["lavalite", "Testimonial"],
+    "keywords": ["lavalite", "litecms" , "Testimonial"],
     "license": "MIT",
     "authors": [
         {

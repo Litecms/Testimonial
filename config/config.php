@@ -27,7 +27,7 @@ return [
         'slugs'         => ['slug' => 'name'],
         'dates'         => ['deleted_at'],
         'appends'       => [],
-        'fillable'      => ['user_id', 'name', 'designation', 'description', 'image', 'status', 'date'],
+        'fillable'      => ['user_id', 'name', 'designation', 'description', 'image', 'status', 'date','upload_folder'],
 
         'upload-folder' => '/uploads/testimonial/testimonial',
         'uploads'       => [

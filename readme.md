@@ -1,4 +1,4 @@
-This is a Laravel 5 package that provides testimonial management facility for lavalite framework.
+This is a Litecms  package that provides testimonial management facility for lavalite framework.
 
 ## Installation
 
@@ -34,15 +34,18 @@ Configuration
 
     php artisan vendor:publish --provider="Litecms\Testimonial\Providers\TestimonialServiceProvider" --tag="config"
 
-Language
+Language files
 
     php artisan vendor:publish --provider="Litecms\Testimonial\Providers\TestimonialServiceProvider" --tag="lang"
 
-Views public and admin
+Views files
 
     php artisan vendor:publish --provider="Litecms\Testimonial\Providers\TestimonialServiceProvider" --tag="view"
+   
 
-Publish admin views only if it is necessary.
+Public folders
+
+    php artisan vendor:publish --provider="Litecms\Testimonial\Providers\TestimonialServiceProvider" --tag="public"
 
 ## Usage
 
