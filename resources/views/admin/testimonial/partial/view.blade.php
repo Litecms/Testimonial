@@ -33,7 +33,7 @@
                 <div class='col-md-6 col-sm-12'>
 
                 <label>Photo</label><br>
-                    <img src="{!!url(@$testimonial->defaultImage('sm','image'))!!}">
+                    <img src="{!!url(@$testimonial->defaultImage('testimonial.sm','image'))!!}">
                 </div>
                 {!!Form::hidden('upload_folder')!!}
 

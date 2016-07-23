@@ -22,9 +22,7 @@
                     </div>
                     <div class="testimonial-desc">
                         <div class="testimonial-avtar">
-                            @if(!empty($testimonial['image']))
-                                <img alt="" class="img-responsive img-circle center-block" src="{!!url(@$testimonial->defaultImage('tm','image'))!!}">
-                            @endif
+                                <img alt="" class="img-responsive img-circle center-block" src="{!!url(@$testimonial->defaultImage('testimonial.md','image'))!!}">
                         </div>
                         <h3 class="text-capitalize">
                             {{@$testimonial->name}}

@@ -16,6 +16,27 @@ return [
      * Modules.
      */
     'modules'     => ['testimonial'],
+        /*
+     * Image size.
+     */
+    'image'    => [
+
+        'sm' => [
+            'width'     => '160',
+            'height'    => '120',
+            'action'    => 'fit',
+            'watermark' => 'img/logo/default.png',
+        ],
+        
+        'md' => [
+            'width'     => '140',
+            'height'    => '140',
+            'action'    => 'fit',
+            'watermark' => 'img/logo/default.png',
+        ],
+
+
+    ],
 
     'testimonial' => [
         'model'         => 'Litecms\Testimonial\Models\Testimonial',
