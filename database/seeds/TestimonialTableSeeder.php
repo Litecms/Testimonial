@@ -82,7 +82,7 @@ class TestimonialTableSeeder extends Seeder
                 'description' => null,
                 'icon'        => 'fa fa-comments-o',
                 'target'      => null,
-                'order'       => 1,
+                'order'       => 240,
                 'status'      => 1,
             ],
 
@@ -94,7 +94,7 @@ class TestimonialTableSeeder extends Seeder
                 'description' => null,
                 'icon'        => null,
                 'target'      => null,
-                'order'       => 1,
+                'order'       => 240,
                 'status'      => 1,
             ],
 
