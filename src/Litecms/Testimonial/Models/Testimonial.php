@@ -10,10 +10,11 @@ use Litepie\Hashids\Traits\Hashids;
 use Litepie\Repository\Traits\PresentableTrait;
 use Litepie\Revision\Traits\Revision;
 use Litepie\Trans\Traits\Trans;
+use Litepie\User\Traits\UserModel;
 
 class Testimonial extends Model
 {
-    use Filer, SoftDeletes, Hashids, Slugger, Trans, Revision, PresentableTrait;
+    use Filer, SoftDeletes, Hashids, Slugger, Trans, Revision, PresentableTrait, UserModel;
 
     /**
      * Configuartion for the model.
@@ -21,38 +22,5 @@ class Testimonial extends Model
      * @var array
      */
     protected $config = 'package.testimonial.testimonial';
-
-    /**
-     * Date format for public
-     * @param type $val
-     * @return date
-     */
-    public function getDateAttribute($val)
-    {
-
-        if ($val == '0000-00-00' || empty($val)) {
-            return '';
-        }
-
-        return date('d M, Y', strtotime($val));
-    }
-
-// /**
-
-//  * Set the date for public
-
-//  * @param type $val
-
-//  * @return date
-    //  */
-    public function setDateAttribute($val)
-    {
-
-        if ($val == '') {
-            return '';
-        }
-
-        return $this->attributes['date'] = date('Y-m-d', strtotime($val));
-    }
 
 }

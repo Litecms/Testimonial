@@ -17,10 +17,7 @@
 				@forelse($testimonials as $value)
 				<div class="row">
 					<div class="col-sm-3 col-md-2">
-						<!-- <img src="images/testimonial1.jpg" class="img-circle img-responsive" alt="testimonial"/> -->
-						 @if(!empty($value['image']))
-             				<img src="{!!trans_url('image/sm/'.@$value['image']['efolder'])!!}/{!!@$value['image']['file']!!}" class="img-circle img-responsive" alt="testimonial">
-                        @endif
+						{!!$value->fileShow('image')!!}
 					</div>
 					<div class="col-sm-9 col-md-10">
 						<blockquote>

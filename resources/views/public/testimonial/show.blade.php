@@ -4,11 +4,7 @@
             <div class="card-box">
                 <div class="row">
                     <div class="col-md-6">
-                        @if(!empty($testimonial['image']))
-                        <img src="{!!trans_url('image/tm/'.@$testimonial['image']['efolder'])!!}/{!!@$testimonial['image']['file']!!}" class="img-responsive img-circle center-block" alt="">
-                        @else
-                        <img src="{!!trans_url('img/avatar/male.png')!!}" class="img-responsive img-circle center-block" alt="">
-                        @endif
+                        <img src="{!!url(@$testimonial->defaultImage('testimonial.md','image'))!!}" class="img-responsive img-circle center-block" alt="">
                         <h4 class="text-dark header-title m-t-0">
                             {!! $testimonial['name'] !!}
                         </h4>
