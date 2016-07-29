@@ -16,10 +16,10 @@ return [
      * Modules.
      */
     'modules'     => ['testimonial'],
-        /*
+    /*
      * Image size.
      */
-    'image'    => [
+    'image'       => [
 
         'sm' => [
             'width'     => '160',
@@ -27,14 +27,13 @@ return [
             'action'    => 'fit',
             'watermark' => 'img/logo/default.png',
         ],
-        
+
         'md' => [
             'width'     => '140',
             'height'    => '140',
             'action'    => 'fit',
             'watermark' => 'img/logo/default.png',
         ],
-
 
     ],
 
@@ -48,9 +47,9 @@ return [
         'slugs'         => ['slug' => 'name'],
         'dates'         => ['deleted_at'],
         'appends'       => [],
-        'fillable'      => ['user_id', 'name', 'designation', 'description', 'image', 'status', 'date','upload_folder'],
+        'fillable'      => ['user_id', 'name', 'designation', 'description', 'image', 'status', 'date', 'upload_folder'],
 
-        'upload-folder' => '/uploads/testimonial/testimonial',
+        'upload_folder' => '/testimonial/testimonial',
         'uploads'       => [
             'single'   => ['image'],
             'multiple' => [],

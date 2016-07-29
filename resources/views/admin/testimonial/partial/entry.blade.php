@@ -33,7 +33,7 @@
                 </div>
                 <div class='col-md-6 col-sm-12'>
                  Photo:
-                      {!!Filer::uploader('image',@$testimonial->getUploadURL('image'),1)!!}
-                      {!! Filer::editor('image', @$testimonial['image'],1) !!}
+                      {!!$testimonial->fileUpload('image')!!}
+                      {!!$testimonial->fileEdit('image') !!}
                 </div>
                 {!!Form::hidden('upload_folder')!!}
