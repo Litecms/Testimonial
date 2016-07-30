@@ -104,6 +104,7 @@ class TestimonialUserApiController extends BaseController
         try {
             $attributes            = $request->all();
             $attributes['user_id'] = user_id('admin.api');
+            $attributes['user_type'] = user_type();
             $testimonial           = $this->repository->create($attributes);
             $testimonial           = $testimonial->presenter();
             $testimonial['code']   = 2004;
