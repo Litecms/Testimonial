@@ -1,0 +1,36 @@
+{
+    "name": "litecms/testimonial",
+    "description": "Testimonial package for litecms.",
+    "keywords": ["lavalite", "Testimonial"],
+    "license": "MIT",
+    "type": "lavalite-package",
+
+    "authors": [
+        {
+            "name": "Lavalite",
+            "email": "info@lavalite.org"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+    },
+    "autoload": {
+        "classmap": [
+            "database/seeds"
+        ],
+        "psr-4": {
+            "Litecms\\Testimonial\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Litecms\\Testimonial\\Providers\\TestimonialServiceProvider"
+            ],
+            "aliases": {
+                "Testimonial"  : "Litecms\\Testimonial\\Facades\\Testimonial"
+            }
+        }
+    },
+    "minimum-stability": "dev"
+}
