@@ -10,7 +10,8 @@ class TestimonialTableSeeder extends Seeder
     public function run()
     {
         DB::table(config('litecms.testimonial.testimonial.model.table'))->insert([
-            ['id'           => '1',
+            [
+                'id'           => '1',
                 'name'          => 'Julie Walters',
                 'designation'   => 'developer',
                 'description'   => 'Life is 10% what happens to you and 90% how you react to it.',
@@ -23,8 +24,10 @@ class TestimonialTableSeeder extends Seeder
                 'upload_folder' => null,
                 'deleted_at'    => null,
                 'created_at'    => '2018-01-25 23:10:38',
-                'updated_at'    => '2018-09-21 10:16:56'],
-            ['id'           => '2',
+                'updated_at'    => '2018-09-21 10:16:56'
+            ],
+            [
+                'id'           => '2',
                 'name'          => 'Anthony Hopkins',
                 'designation'   => 'designer',
                 'description'   => 'There is only one happiness in this life,
@@ -38,8 +41,10 @@ class TestimonialTableSeeder extends Seeder
                 'upload_folder' => null,
                 'deleted_at'    => null,
                 'created_at'    => '2018-02-01 11:52:29',
-                'updated_at'    => '2018-09-21 10:17:18'],
-            ['id'           => '3',
+                'updated_at'    => '2018-09-21 10:17:18'
+            ],
+            [
+                'id'           => '3',
                 'name'          => 'Michael Caine',
                 'designation'   => 'Developer',
                 'description'   => 't’s happened to me. And if you’re reading this,
@@ -54,8 +59,10 @@ class TestimonialTableSeeder extends Seeder
                 'upload_folder' => null,
                 'deleted_at'    => null,
                 'created_at'    => '2018-05-02 06:05:32',
-                'updated_at'    => '2018-09-21 10:12:42'],
-            ['id'           => '4',
+                'updated_at'    => '2018-09-21 10:12:42'
+            ],
+            [
+                'id'           => '4',
                 'name'          => 'Sandrea Hanson',
                 'designation'   => 'Developer',
                 'description'   => 'Advertisers have attempted to quantify and qualify the use of celebrities in their marketing campaigns by evaluating the awareness generated,

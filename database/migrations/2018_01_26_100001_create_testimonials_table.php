@@ -20,11 +20,11 @@ class CreateTestimonialsTable extends Migration
             $table->increments('id');
             $table->string('name', 255)->nullable();
             $table->string('designation', 255)->nullable();
-            $table->string('description', 255)->nullable();
+            $table->text('description')->nullable();
             $table->text('image')->nullable();
             $table->date('date')->nullable();
             $table->string('slug', 255)->nullable();
-            $table->enum('status', ['show', 'hide'])->nullable();
+            $table->enum('status', ['Show', 'Hide'])->default('Show')->nullable();
             $table->string('user_id', 255)->nullable();
             $table->string('user_type', 255)->nullable();
             $table->string('upload_folder', 255)->nullable();
