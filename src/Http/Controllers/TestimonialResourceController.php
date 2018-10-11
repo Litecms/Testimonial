@@ -48,7 +48,7 @@ class TestimonialResourceController extends BaseController
 
         $testimonials = $this->repository->paginate();
 
-        return $this->response->title(trans('testimonial::testimonial.names'))
+        return $this->response->setMetaTitle(trans('testimonial::testimonial.names'))
             ->view('testimonial::testimonial.index', true)
             ->data(compact('testimonials'))
             ->output();
@@ -71,7 +71,7 @@ class TestimonialResourceController extends BaseController
             $view = 'testimonial::testimonial.new';
         }
 
-        return $this->response->title(trans('app.view') . ' ' . trans('testimonial::testimonial.name'))
+        return $this->response->setMetaTitle(trans('app.view') . ' ' . trans('testimonial::testimonial.name'))
             ->data(compact('testimonial'))
             ->view($view, true)
             ->output();
@@ -88,7 +88,7 @@ class TestimonialResourceController extends BaseController
     {
 
         $testimonial = $this->repository->newInstance([]);
-        return $this->response->title(trans('app.new') . ' ' . trans('testimonial::testimonial.name')) 
+        return $this->response->setMetaTitle(trans('app.new') . ' ' . trans('testimonial::testimonial.name')) 
             ->view('testimonial::testimonial.create', true) 
             ->data(compact('testimonial'))
             ->output();
@@ -134,7 +134,7 @@ class TestimonialResourceController extends BaseController
      */
     public function edit(TestimonialRequest $request, Testimonial $testimonial)
     {
-        return $this->response->title(trans('app.edit') . ' ' . trans('testimonial::testimonial.name'))
+        return $this->response->setMetaTitle(trans('app.edit') . ' ' . trans('testimonial::testimonial.name'))
             ->view('testimonial::testimonial.edit', true)
             ->data(compact('testimonial'))
             ->output();

@@ -38,7 +38,7 @@ class TestimonialPublicController extends BaseController
             return $query->orderBy('id','DESC');
         })->paginate();
 
-        return $this->response->title(trans('testimonial::testimonial.names'))
+        return $this->response->setMetaTitle(trans('testimonial::testimonial.names'))
             ->view('testimonial::public.testimonial.index')
             ->data(compact('testimonials'))
             ->output();
@@ -60,7 +60,7 @@ class TestimonialPublicController extends BaseController
         })->paginate();
 
 
-        return $this->response->title(trans('testimonial::testimonial.names'))
+        return $this->response->setMetaTitle(trans('testimonial::testimonial.names'))
             ->view('testimonial::public.testimonial.index')
             ->data(compact('testimonials'))
             ->output();
@@ -80,7 +80,7 @@ class TestimonialPublicController extends BaseController
                          ->where('slug', $slug);
         })->first(['*']);
 
-        return $this->response->title($testimonial->name . trans('testimonial::testimonial.name'))
+        return $this->response->setMetaTitle($testimonial->name . trans('testimonial::testimonial.name'))
             ->view('testimonial::public.testimonial.show')
             ->data(compact('testimonial'))
             ->output();
