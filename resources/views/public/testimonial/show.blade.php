@@ -1,10 +1,10 @@
-            @include('testimonial::public.testimonial.partial.header')
+            @include('testimonial::testimonial.partial.header')
 
             <section class="single">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
-                            @include('testimonial::public.testimonial.partial.aside')
+                            @include('testimonial::testimonial.partial.aside')
                         </div>
                         <div class="col-md-9 ">
                             <div class="area">
