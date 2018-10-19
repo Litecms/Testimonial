@@ -1,12 +1,9 @@
-<section class="inner-page-title header">
+<section class="title">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center">
-        <h1>{!! trans('testimonial::testimonial.name') !!}</h1>
-        <form action="{{trans_url('testimonials')}}" class="search search-full">
-            <input type="text" class="form-control" name="search[q]" value="" placeholder="Search existing testimonial">
-            <button class="btn btn-primary" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-        </form>
+         <h1>{!! $title ?? trans('testimonial::testimonial.title.main') !!}</h1>
+         <p> {!! $subtitle ??  trans('testimonial::testimonial.title.sub') !!}</p>
       </div>
     </div>
   </div>

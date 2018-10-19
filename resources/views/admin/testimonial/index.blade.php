@@ -17,16 +17,10 @@
         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
                     <li class="{!!(request('status') == '')?'active':'';!!}"><a href="{!!guard_url('testimonial/testimonial')!!}">{!! trans('testimonial::testimonial.names') !!}</a></li>
-                    <li class="{!!(request('status') == 'archive')?'active':'';!!}"><a href="{!!guard_url('testimonial/testimonial?status=archive')!!}">Archived</a></li>
-                    <li class="{!!(request('status') == 'deleted')?'active':'';!!}"><a href="{!!guard_url('testimonial/testimonial?status=deleted')!!}">Trashed</a></li>
                     <li class="pull-right">
                     <span class="actions">
-                    <!--   
-                    <a  class="btn btn-xs btn-purple"  href="{!!guard_url('testimonial/testimonial/reports')!!}"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-sm hidden-xs"> Reports</span></a>
-                    @include('testimonial::admin.testimonial.partial.actions')
-                    -->
-                    @include('testimonial::admin.testimonial.partial.filter')
-                    @include('testimonial::admin.testimonial.partial.column')
+                        @include('testimonial::admin.testimonial.partial.filter')
+                        @include('testimonial::admin.testimonial.partial.column')
                     </span> 
                 </li>
             </ul>

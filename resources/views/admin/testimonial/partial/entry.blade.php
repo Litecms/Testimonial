@@ -28,19 +28,24 @@
                        -> placeholder(trans('testimonial::testimonial.placeholder.description'))!!}
                 </div>
                 <div class='col-md-12 col-sm-12'>
+                  <div class="row">
                     <div class="form-group">
                         <label for="image" class="control-label col-lg-12 col-sm-12 text-left"> {{trans('testimonial::testimonial.label.image') }}
                         </label>
-                        <div class='col-lg-3 col-sm-12'>
-                            {!! $testimonial->files('image')
-                            ->url($testimonial->getUploadUrl('image'))
-                            ->mime(config('filer.image_extensions'))
-                            ->dropzone()!!}
-                        </div>
-                        <div class='col-lg-7 col-sm-12'>
-                        {!! $testimonial->files('image')
-                        ->editor()!!}
-                        </div>
+                        @if($mode == 'create' || $mode == 'edit')
+                          <div class='col-lg-12 col-sm-12'>
+                              {!! $testimonial->files('image')
+                              ->url($testimonial->getUploadUrl('image'))
+                              ->mime(config('filer.image_extensions'))
+                              ->dropzone()!!}
+                          </div>
+                          @else
+                                <div class='col-lg-12 col-sm-12'>
+                                {!! $testimonial->files('image')
+                                ->show()!!}
+                                </div>
+                          @endif
                     </div>
+                  </div>
                 </div>
             </div>
